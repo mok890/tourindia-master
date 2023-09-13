@@ -38,7 +38,7 @@ nav ul li a{
   padding: 7px 13px;
   border-radius: 3px;
   text-transform: uppercase;
- 
+  text-decoration: none;
 }
 input {
     font-family: "Poppins", sans-serif;
