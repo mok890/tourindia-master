@@ -1,12 +1,20 @@
 const mongoose = require('mongoose');
 
-const mongoURI =
-  "mongodb://127.0.0.1:27017/tourism?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.1";
 
-const connectToMongo = ()=>{
-    mongoose.connect(mongoURI, ()=>{
-        console.log("Connected to Mongo Successfully");
-    })
+
+async function connectToMongo() {
+  try {
+    await mongoose.connect(
+      "mongodb+srv://405Found:MCQyOLOjYARHb2Da@cluster0.hx0xfre.mongodb.net/tourism",
+      {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      }
+    );
+    console.log('Connected to MongoDB');
+  } catch (error) {
+    console.error('Error connecting to MongoDB:', error);
+  }
 }
 
 module.exports = connectToMongo;
