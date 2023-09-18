@@ -2631,9 +2631,10 @@ h6 {
 
 /* Dropdown Button */
 .dropbtn {
-  background-color: #04AA6D;
+  background-color: #397490;
   color: white;
   padding: -9px;
+  border-radius: 9px;
   font-size: 14px;
   border: none;
 }
