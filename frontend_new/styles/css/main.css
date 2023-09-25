@@ -1914,6 +1914,8 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 1024px) {
   .navbar-brand img {
     margin-left: 5px;
+    margin-bottom: -20px;
+    margin-top: -25px;
   }
 }
 
@@ -2323,7 +2325,7 @@ h1, h2, h3, h4, h5, h6 {
 .portfolio-area .filters-content .item {
   text-align: center;
   cursor: pointer;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 
 .portfolio-area .filters-content .item img {
@@ -2346,6 +2348,9 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
+.row{
+    
+}
 .service-area {
   background: url(../img/service-bg.jpg) center;
   background-size: cover;
@@ -2671,4 +2676,89 @@ h6 {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+/* section 4 */
+.section-4-container {
+    height: 100%;
+    margin-top: 8px;
+    height: 450px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     margin-bottom:100px;
+}
+.section-4-offers {
+    width: 230px;
+    height: 100%;
+   
+    background-position: bottom;
+    background-repeat: no-repeat;
+     
+}
+.section-4-offers-viewall{
+    /* font-style: italic; */
+    color: #000;
+    font-weight: 500;
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.section-4-offers-viewall button {
+    margin-top: 24px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.section-4-list {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    display: flex;
+    align-items: end;
+}
+.section-4-item{
+   
+    width: 232px;
+    height: 100%;
+    padding: 0px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.section-4-item img {
+    width: 200px;
+    height: 200px;
+}
+.section-4-item-head{
+   
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    
+}
+.section-4-item-price {
+    margin-top: 12px;
+    font-size: 16px;
+    color: #388e3c;
+}
+.section-4-item-explore{
+    opacity: 0.6;
+    margin-top: 12px;
+    font-weight: 300;
+    font-size: 12px;
+}
 
