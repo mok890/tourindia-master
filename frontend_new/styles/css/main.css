@@ -2243,9 +2243,64 @@ h1, h2, h3, h4, h5, h6 {
   background: #8ab92d;
   border: 1px solid transparent;
   color: #fff;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 30px;
+  padding-right: 0px;
   border-radius: 50px;
+}
+
+.search-bar{
+  width: 100%;
+  max-width: 700px;
+  /* background: rgba(255,255,255,0.2); */
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  padding: 7px 16px;
+
+}
+
+.search-bar input{
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 11px 45px;
+  font-size: 20px;
+  color: #0d1301;
+  border-radius: 60px;
+}
+
+::placeholder{
+  color: #8ab92d;
+}
+
+.search-bar button img{
+  width: 25px;
+}
+
+.search-bar button{
+  border-radius: 50%;
+  background: #cac7ff;
+  border: 0;
+  width: 60px;
+  height: 60px;
+}
+
+.result-box ul{
+  border-top: 1px solid #0d1301;
+  padding: 15px 10px;
+}
+.result-box ul li{
+  list-style: none;
+  border-radius: 3px;
+  padding: 15px 10px;
+  cursor: pointer;
+}
+.result-box ul li:hover{
+  background: #8ab92d;
+}
+.result-box{
+  max-height: 300px;
+  overflow-y: scroll;
 }
 
 .primary-btn:hover {
