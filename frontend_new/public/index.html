@@ -73,7 +73,18 @@
                         <h1>
                             Incredible India!
                         </h1>
-                        <a href="#" class="primary-btn text-uppercase">Explore Now</a>
+                        <div class="primary-btn text-uppercase">
+                            <div class="search-bar">
+                                <input type="text" id="input-box" placeholder="Search..."  autocomplete="off">
+                                <!-- <button type="submit"><img src="" alt="img/search.png"></button> -->
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </div>
+                            <div class="result-box">
+                                 
+                            </div>
+                        </div>
+                         
+                        <!-- <a href="#" class="primary-btn text-uppercase">Explore Now</a> -->
                     </div>
                 </div>
             </div>
@@ -617,6 +628,54 @@
     <script src="js/mail-script.js"></script>
     <script src="js/isotope.pkgd.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+         let availableKeywords = [
+            'Golden Temple',
+            'Gwalior Fort',
+            'Twang',
+            'Camel Safari',
+            'Sanchi Stupa',
+            'Alleppey',
+            'Mehrangarh Fort',
+            'Vivekananda Rock Memorial',
+            'Umngot river',
+            'Colva Beach',
+            'Mon',
+            'Hampi'
+        ];
+
+        const resultsBox = document.querySelector(".result-box");
+        const inputBox = document.getElementById("input-box");
+
+        inputBox.onkeyup = function(){
+            let result = [];
+            let input = inputBox.value;
+            if(input.length){
+                result = availableKeywords.filter((keyword)=>{
+                    return keyword.toLowerCase().includes(input.toLowerCase());
+                });
+                console.log(result);
+            }
+            display(result);
+
+            if(!result.length){
+                resultsBox.innerHTML = '';
+            }
+        }
+
+        function display(result){
+            const content = result.map((list)=>{
+                return "<li onclick=selectInput(this)>" + list + "</li>";
+            });
+
+            resultsBox.innerHTML = "<ul>" + content.join('') + "</ul>";
+        }
+
+        function selectInput(list){
+            inputBox.value = list.innerHTML;
+            resultsBox.innerHTML = '';
+        }
+    </script>
 </body>
 
 </html>
